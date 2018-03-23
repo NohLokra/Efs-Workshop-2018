@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
     }, {
         label: "Trouver une collecte",
         href: [
-            "/map"
+            "/carte"
         ]
     }, {
         label: "Jeu: Vrai ou faux ?",
