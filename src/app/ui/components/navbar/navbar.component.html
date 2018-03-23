@@ -1,3 +1,20 @@
-<p>
-  navbar works!
-</p>
+<nav class="navbar navbar-expand-lg navbar-primary bg-dark">
+    <a class="navbar-brand" href="#">EFS App</a>
+    <button class="btn btn-default ml-auto" type="button" (click)="isVisible = !isVisible" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fal fa-bars"></i>
+    </button>
+
+    <div id="sidebar" class="col-10 col-sm-7 col-md-4 col-lg-3 bg-dark" [ngClass]='{visible: isVisible}'>
+        <ul class="navbar-nav d-flex flex-column text-light">
+            <li class="nav-item">
+                <span class="nav-header">EFS Roleplay</span>
+            </li>
+            <app-sidebar-item [item]="item" *ngFor="let item of sidebarItems"></app-sidebar-item>
+        </ul>
+        <button class="btn btn-close btn-default text-danger" (click)="isVisible = false">
+            <i class="fal fa-times"></i>
+        </button>
+    </div>
+    <div class="overlay"></div>
+</nav>

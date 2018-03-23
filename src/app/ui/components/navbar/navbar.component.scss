@@ -1,0 +1,49 @@
+#sidebar {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+
+    transition: all 0.5s;
+    transform: translateX(-100%);
+
+    &.visible {
+        transform: translateX(0%);
+
+        &+.overlay {
+            display: block;
+            transform: translateX(0);
+        }
+    }
+
+    & button.btn-close {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+    }
+
+    .nav-header {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.nav-header {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 990;
+    transform: translateX(-100%);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+}

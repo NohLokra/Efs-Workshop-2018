@@ -1,0 +1,14 @@
+<li class="nav-item">
+    <a [routerLink]="item.href" class="nav-link" (click)="itemClicked()">
+        <span class="mr-auto">
+            <i *ngIf="item.icon" class="fa fa-{{ item.icon }}"></i> 
+            {{ item.label }} 
+        </span>
+        <span class="float-right mr-5" *ngIf="item.subMenu">
+            <i class="fal fa-angle-double-right"></i>
+        </span>
+    </a>
+    <ul *ngIf="item.subMenu" class="row" [collapse]="!isVisible">
+        <app-sidebar-item *ngFor="let item of item.subMenu" [item]="item"></app-sidebar-item>
+    </ul>
+</li>

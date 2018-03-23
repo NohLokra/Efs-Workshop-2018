@@ -7,16 +7,20 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './ui/components/navbar/navbar.component';
 import { HomePageComponent } from './ui/pages/home/home.component';
 
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { SidebarItemComponent } from './ui/components/sidebar-item/sidebar-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomePageComponent
+    HomePageComponent,
+    SidebarItemComponent
   ],
   imports: [
     BrowserModule,
-    RoutingModule
+    RoutingModule,
+    CollapseModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

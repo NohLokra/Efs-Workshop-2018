@@ -51,7 +51,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - Réaliser une quête
 
 # Les succès / Badges
- - Vidé: "A donné 5 litres de sang"
+ - Vidé: "A donné autant de sang que possible en une année"
  - Premier sang: "A effectué son premier don ! Félicitations !"
  - Voyageur: "A donné son sang dans 3 villes différentes"
  - ça vient du coeur: "S'est porté bénévole au cours d'une collecte"

@@ -19,9 +19,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "assets/fontawesome/css/fa-svg-with-js.css"
       ],
-      "scripts": [],
+      "scripts": [
+          "assets/fontawesome/js/fontawesome-all.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
