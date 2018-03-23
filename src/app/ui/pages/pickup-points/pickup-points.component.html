@@ -1,0 +1,7 @@
+<h1 class="row">{{ title }}</h1>
+
+<div class="row">
+    <agm-map [latitude]="lat" [longitude]="lng" [streetViewControl]="false" class="col-12">
+      <agm-marker *ngFor='let marker of collectPoints' [latitude]="marker.point.lat" [longitude]="marker.point.lng" [title]="marker.label"></agm-marker>
+    </agm-map>
+</div>

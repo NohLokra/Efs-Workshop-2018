@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AgmCoreModule } from '@agm/core';
+
 import { RoutingModule } from './app.router';
 
 import { AppComponent } from './app.component';
@@ -13,6 +15,10 @@ import { SidebarItemComponent } from './ui/components/sidebar-item/sidebar-item.
 import { PickupPointsComponent } from './ui/components/profile/pickup-points/pickup-points.component';
 import { DonationsComponent } from './ui/components/profile/donations/donations.component';
 import { PersonnalInformationsComponent } from './ui/components/profile/personnal-informations/personnal-informations.component';
+import { PickupPointsPage } from './ui/pages/pickup-points/pickup-points.component';
+
+
+import { UsersService } from './services/users.service';
 
 @NgModule({
   declarations: [
@@ -23,14 +29,20 @@ import { PersonnalInformationsComponent } from './ui/components/profile/personna
     ProfilePageComponent,
     PickupPointsComponent,
     DonationsComponent,
-    PersonnalInformationsComponent
+    PersonnalInformationsComponent,
+    PickupPointsPage
   ],
   imports: [
     BrowserModule,
     RoutingModule,
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    AgmCoreModule.forRoot({
+        apiKey: 'AIzaSyB9H28IIHZ10irdV2SysFv9KcvjT-3g_hI'
+    })
   ],
-  providers: [],
+  providers: [
+      { useClass: UsersService, provide: UsersService }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
