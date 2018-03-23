@@ -1,0 +1,22 @@
+.nav {
+    a.nav-item.active {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            bottom: 10px;
+            left: 25%;
+            margin-left: auto;
+            margin-right: auto;
+    
+            width: 50%;
+            height: 2px;
+            background-color: tomato;
+            content: '';
+        }
+    }
+}
+
+.avatar-row {
+    background-color: rgba(238, 239, 240, 1);
+}

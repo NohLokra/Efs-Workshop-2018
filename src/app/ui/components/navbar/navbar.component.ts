@@ -16,33 +16,8 @@ export class NavbarComponent implements OnInit {
     }, {
         label: "Profil",
         href: [
-            ""
-        ],
-        subMenu: [{
-            label: "Avatar",
-            href: [
-                "/profil",
-                "avatar"
-            ]
-        }, {
-            label: "Mes points de collecte",
-            href: [
-                "/profil",
-                "collecte"
-            ]
-        }, {
-            label: "Mes dons",
-            href: [
-                "/profil",
-                "dons"
-            ]
-        }, {
-            label: "Informations personnelles",
-            href: [
-                "/profil",
-                "infos-personnelles"
-            ]
-        }]
+            "/profil/points-collecte"
+        ]
     }, {
         label: "Trouver une collecte",
         href: [

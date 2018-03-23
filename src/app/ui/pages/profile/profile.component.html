@@ -1,0 +1,33 @@
+<div class="row avatar-row py-2">
+    <div class="col-6 col-sm-4">
+        <img src="/assets/images/avatar.png" class="img-fluid" />
+    </div>
+    <div class="col-sm-8 col-6">
+        <div class="row">
+            <div class="col-sm-1 col-12">Exp: </div>
+            <div class="col-sm-6 col-12">
+                <div class="progress bg-light">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-sm-block col-sm-5">
+                210 / 2100
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-5">
+    <ul class="nav d-flex justify-content-center col-12 bg-light">
+        <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['points-collecte']">Mes points de collecte</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['dons']">Mes dons</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['informations-personnelles']">Informations personnelles</a>
+        </li>
+    </ul>
+</div>
+<router-outlet></router-outlet>
